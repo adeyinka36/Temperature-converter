@@ -2,7 +2,7 @@
 
 namespace App\Convert;
 
-class Convert
+class ConvertCommandHandler
 {
     public function celciusToFarenheight(float $value): float
     {

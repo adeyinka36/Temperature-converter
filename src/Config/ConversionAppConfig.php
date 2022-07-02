@@ -2,6 +2,8 @@
 
 namespace App\config;
 
+use App\Handlers\ConverisonHandler;
+use Webmozart\Console\Api\Args\Format\Argument;
 use Webmozart\Console\Config\DefaultApplicationConfig;
 
 class ConversionAppConfig extends DefaultApplicationConfig
@@ -11,8 +13,18 @@ class ConversionAppConfig extends DefaultApplicationConfig
         parent::configure();
 
         $this
-            ->setName('convert')
-            ->setVersion('1.0.0')// ...
-        ;
+            ->setName('converter')
+            ->setVersion('1.0.0');
+        $this
+            ->beginCommand('to-celcius')
+            ->setDescription('Convert from farenheight to celcius')
+            ->addArgument('value', Argument::OPTIONAL, 'The value to convert to celcius')
+            ->setHandler(new ConverisonHandler())
+            ->end();
+        $this
+            ->beginCommand('to-farenheight')
+            ->setDescription('Convert from celcius to farenheight')
+            ->setHandler(new ConverisonHandler())
+            ->end();
     }
 }

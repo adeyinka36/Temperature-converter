@@ -10,9 +10,9 @@ This is a simple console app. It is  a temperature converter program using PHP. 
 
 ## Installation
 
--Install the dependencies by runing "composer install" at the root.
+- Install the dependencies by runing "composer install" at the root.
 - Run " composer dump-autoload -o " to autoload classes.
-- Ensure you have the correct permission to run the script by running the command "chmod a+x bin/git"
+- Ensure you have the correct permission to run the script by running the command "chmod a+x bin/converter"
 
 ## Using the App
 - Enter the path to the executable script followed by the command and then the value to convert just like this:

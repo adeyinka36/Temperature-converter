@@ -10,8 +10,10 @@ use Webmozart\Console\Api\IO\IO;
 
 class ConverisonHandler
 {
+    /** @var string  */
     const CELCIUS = 'to-celcius';
 
+    /** @var Convert  */
     private $convert;
 
     public function __construct()

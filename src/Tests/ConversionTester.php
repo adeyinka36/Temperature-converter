@@ -17,7 +17,7 @@ class ConversionTester extends PHPUnit\Framework\TestCase
     function testConversionToCelcius()
     {
         $value = 100.5;
-        $expectedResult = ($value - 32) * .5556;
+        $expectedResult = round(($value - 32) * .5556, 2);
 
         $instance = new Convert();
         $result = $instance->farenheightToCelcius($value);
@@ -29,7 +29,7 @@ class ConversionTester extends PHPUnit\Framework\TestCase
     function testConversionToFarenheight()
     {
         $value = 12.5;
-        $expectedResult = ($value / .5556) + 32;
+        $expectedResult = round(($value / .5556) + 32, 2);
 
         $instance = new Convert();
         $result = $instance->celciusToFarenheight($value);
